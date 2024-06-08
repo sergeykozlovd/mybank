@@ -7,11 +7,16 @@
     <string name="enter_amount">Enter Amount</string>
     <string name="merchant_id">Merchant ID</string>
     <string name="btc">BTC</string>
-    <string name="pay_time_out">Pay Time Out</string>
+    <string name="pay_time_out1">Pay Time Out 1</string>
+    <string name="pay_time_out2">Pay Time Out 2</string>
+    <string name="pay_time_out3">Pay Time Out 3</string>
     <string name="message_dialog">Message Dialog</string>
     <string name="save">Save</string>
     <string name="connecting">Connecting ...</string>
     <string name="settings">Settings</string>
     <string name="card_payment">Card Payment</string>
     <string name="payment">Payment</string>
+    <string name="message_success_text">Message Success Text</string>
+    <string name="message_failure_text">Message Failure Text</string>
+    <string name="success">Success</string>
 </resources>

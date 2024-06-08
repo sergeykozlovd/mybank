@@ -14,16 +14,14 @@
         android:background="@color/purple_500"
         android:navigationIcon="@drawable/arrow_back"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            style="@style/TitleText"
             android:id="@+id/secretSettingsButton"
+            style="@style/TitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/settings"/>
+            android:text="@string/settings" />
     </Toolbar>
-
-
-
 
 
     <androidx.core.widget.NestedScrollView
@@ -94,46 +92,145 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayout"
-                android:visibility="gone"
-                tools:visibility="visible"
-                android:id="@+id/layoutPayTimeOut"
+            <LinearLayout
+                android:id="@+id/layoutPayTimeOut1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/elements_margin"
-                android:hint="@string/pay_time_out"
-                app:endIconMode="clear_text"
-                app:hintEnabled="true">
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputLayout
 
-                    android:id="@+id/etPayTimeOut"
+                    style="@style/TextInputLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:digits="0123456789"
-                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:hint="@string/pay_time_out1"
+                    app:endIconMode="clear_text"
+                    app:hintEnabled="true">
 
-                    android:selectAllOnFocus="true" />
+                    <com.google.android.material.textfield.TextInputEditText
 
-            </com.google.android.material.textfield.TextInputLayout>
+                        android:id="@+id/etPayTimeOut1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:inputType="numberDecimal"
 
+                        android:selectAllOnFocus="true" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayout"
-                android:visibility="gone"
-                tools:visibility="visible"
-                android:id="@+id/layoutMessageDialog"
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSuccess1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_weight="0"
+                    android:text="@string/success" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPayTimeOut2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/elements_margin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
 
-                android:hint="@string/message_dialog"
+                <com.google.android.material.textfield.TextInputLayout
+
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pay_time_out2"
+                    app:endIconMode="clear_text"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/etPayTimeOut2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:inputType="numberDecimal"
+
+                        android:selectAllOnFocus="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSuccess2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_weight="0"
+                    android:text="@string/success" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPayTimeOut3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/elements_margin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/pay_time_out1"
+                    app:endIconMode="clear_text"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/etPayTimeOut3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:inputType="numberDecimal"
+
+                        android:selectAllOnFocus="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSuccess3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_weight="0"
+                    android:text="@string/success" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMessageSuccessDialog"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/elements_margin"
+                android:hint="@string/message_success_text"
+                android:visibility="gone"
+
                 app:endIconMode="clear_text"
-                app:hintEnabled="true">
+                app:hintEnabled="true"
+                tools:visibility="visible">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etMessageDialog"
+                    android:id="@+id/etMessageSuccessDialog"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage"
@@ -142,23 +239,42 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutMessageFailureDialog"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/elements_margin"
+                android:hint="@string/message_failure_text"
+                android:visibility="gone"
+
+                app:endIconMode="clear_text"
+                app:hintEnabled="true"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMessageFailureDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textShortMessage"
+                    android:selectAllOnFocus="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button"
-                android:textStyle="bold"
                 android:layout_width="match_parent"
-                android:padding="@dimen/elements_margin"
-                app:cornerRadius="@dimen/edit_corner_radius"
                 android:layout_height="wrap_content"
-                android:text="@string/save"
                 android:layout_marginTop="@dimen/elements_margin"
-                />
+                android:padding="@dimen/elements_margin"
+                android:text="@string/save"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/edit_corner_radius" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

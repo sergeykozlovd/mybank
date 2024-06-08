@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
@@ -23,6 +24,7 @@ class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
     private var amount = 0
     private var timeout = 0
     private var messageDialog = ""
+    private var isSuccess = true
 
     private var isPlayAnimate = true
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +64,7 @@ class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
             Toolbar.LayoutParams.WRAP_CONTENT
         )
         dialog.findViewById<TextView>(R.id.tvMessageDialog).setText(messageDialog)
+        dialog.findViewById<ImageView>(R.id.imageView).setImageResource( if (isSuccess) R.drawable.ic_payment_success else R.drawable.ic_payment_failure)
         dialog.findViewById<Button>(R.id.button).setOnClickListener {
             dialog.dismiss()
             finish()
@@ -83,6 +86,7 @@ class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
         amount = intent.getIntExtra(KEY_AMOUNT,0)
         timeout = intent.getIntExtra(KEY_PAY_TIMEOUT,0)
         messageDialog = intent.getStringExtra(KEY_MESSAGE_DIALOG).toString()
+        isSuccess = intent.getBooleanExtra(KEY_IS_SUCCESS,true)
     }
 
     private fun initListeners(){
