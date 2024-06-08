@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PayCoin</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="enter">Enter</string>
+    <string name="ok">OK</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="merchant_id">Merchant ID</string>
+    <string name="btc">BTC</string>
+    <string name="pay_time_out">Pay Time Out</string>
+    <string name="message_dialog">Message Dialog</string>
+    <string name="save">Save</string>
+    <string name="connecting">Connecting ...</string>
+    <string name="settings">Settings</string>
+    <string name="card_payment">Card Payment</string>
+    <string name="payment">Payment</string>
+</resources>
