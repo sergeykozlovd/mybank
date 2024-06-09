@@ -30,6 +30,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/bank"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MY BANK"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/textHint"
+            android:gravity="center"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/loginLayout"
             style="@style/TextInputLayout"
@@ -42,6 +55,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/TextInput"
+                android:id="@+id/etLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textShortMessage" />
@@ -60,6 +74,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/TextInput"
+                android:text="@string/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />

@@ -1,53 +1,17 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
-    android:viewportWidth="111"
-    android:viewportHeight="111"
-    android:width="111dp"
-    android:height="111dp">
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="10dp"
+    android:height="10dp"
+    android:viewportWidth="10"
+    android:viewportHeight="10">
+
     <path
-        android:pathData="M109.5 55.5A54 54 0 0 1 1.5 55.5A54 54 0 0 1 109.5 55.5Z"
-        android:fillColor="#aa0000"
-        android:strokeWidth="3"
-        android:strokeMiterLimit="10">
-        <aapt:attr
-            name="android:strokeColor">
-            <gradient
-                android:type="radial"
-                android:centerX="55.5"
-                android:centerY="55.5"
-                android:gradientRadius="55.5"
-                android:tileMode="clamp">
-                <item
-                    android:color="#00130C0E"
-                    android:offset="0.57" />
-                <item
-                    android:color="#A6130C0E"
-                    android:offset="0.8" />
-                <item
-                    android:color="#B3130C0E"
-                    android:offset="0.82" />
-                <item
-                    android:color="#F2130C0E"
-                    android:offset="1" />
-            </gradient>
-        </aapt:attr>
-    </path>
+        android:fillColor="@color/pin_color"
+        android:pathData="M 1.85 0 L 8.15 0 Q 10 0 10 1.85 L 10 8.15 Q 10 10 8.15 10 L 1.85 10 Q 0 10 0 8.15 L 0 1.85 Q 0 0 1.85 0 Z" />
     <path
-        android:pathData="
-        M29,18
-        L55,44
-        L81,18
-        L92,29
-        L66,55
-        L92,81
-        L81,92
-        L55,66
-        L29,92
-        L18,81
-        L44,55
-        L18,29
-        LZ"
-        android:fillColor="#FFFFFF"
-        android:strokeColor="#231F20"
-        android:strokeWidth="3"
-        android:strokeMiterLimit="10" />
+        android:strokeColor="#fff"
+        android:strokeWidth="1.3"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 7 3 L 3 7 L 5 5 L 3 3 L 7 7 " />
 </vector>

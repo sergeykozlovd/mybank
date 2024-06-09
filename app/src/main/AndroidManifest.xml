@@ -33,11 +33,7 @@
 
             android:windowSoftInputMode="adjustResize"/>
 
-<!--        <activity android:name="com.canhub.cropper.CropImageActivity"-->
-<!--            android:theme="@style/Base.Theme.AppCompat"/>-->
-
         <activity android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize"
 
             android:exported="true"
             android:screenOrientation="portrait">
