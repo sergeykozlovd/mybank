@@ -9,13 +9,14 @@ import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private lateinit var viewModel: MainViewModel
 
     private lateinit var toolbar: Toolbar
     private lateinit var editText: EditText
-    private lateinit var payButton: TextView
+    private lateinit var payButton: MaterialButton
     private lateinit var hiddenButton: View
 
     companion object {
@@ -77,16 +78,16 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         editText.addTextChangedListener {
             if (editText.text.length != 0) {
                 if (Integer.parseInt(editText.text.toString()) > 0) {
-                    payButton.setBackgroundResource(R.drawable.pay_background)
+                    payButton.isEnabled = true
                     return@addTextChangedListener
                 }
             }
-            payButton.setBackgroundResource(R.drawable.pay_inactive_background)
+            payButton.isEnabled = false
         }
 
         payButton.setOnClickListener {
             if (editText.text.isNotEmpty() && !editText.text.equals("0")) {
-                payButton.isClickable = false
+                payButton.isEnabled = false
                 when(viewModel.runCount){
                     1 -> {
                         val isSuccess = viewModel.switchSuccess1LiveData.value == true
@@ -123,7 +124,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 }
 
                 editText.text.clear()
-                payButton.isClickable = true
                 if (viewModel.runCount > 2 ){
                     viewModel.runCount = 1
                 } else {
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         editText = findViewById(R.id.editText)
         payButton = findViewById(R.id.payButton)
         hiddenButton = findViewById(R.id.hiddenButton)
-        payButton.isEnabled = true
+        payButton.isEnabled = false
     }
 
 }

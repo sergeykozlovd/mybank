@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/activity_background"
+    android:background="@drawable/shadow_background"
     tools:context=".MainActivity">
 
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
+        style="@style/Toolbar"
         android:navigationIcon="@drawable/arrow_back"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -42,11 +42,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/elements_margin"
                 android:hint="@string/login"
-                app:endIconMode="clear_text"
-                app:hintEnabled="true">
+                app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etLogin"
+                    style="@style/TextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage"
@@ -67,6 +67,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etMerchantId"
                     android:layout_width="match_parent"
+                    style="@style/TextInput"
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage"
                     android:selectAllOnFocus="true" />
@@ -85,6 +86,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etBtc"
+                    style="@style/TextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage"
@@ -112,7 +114,7 @@
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
-
+                        style="@style/TextInput"
                         android:id="@+id/etPayTimeOut1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -125,6 +127,7 @@
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switchSuccess1"
+                    android:checked="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
@@ -153,7 +156,7 @@
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
-
+                        style="@style/TextInput"
                         android:id="@+id/etPayTimeOut2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -189,12 +192,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:hint="@string/pay_time_out1"
+                    android:hint="@string/pay_time_out3"
                     app:endIconMode="clear_text"
                     app:hintEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
-
+                        style="@style/TextInput"
                         android:id="@+id/etPayTimeOut3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -233,6 +236,7 @@
                     android:id="@+id/etMessageSuccessDialog"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    style="@style/TextInput"
                     android:inputType="textShortMessage"
                     android:selectAllOnFocus="true" />
 
@@ -254,6 +258,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etMessageFailureDialog"
+                    style="@style/TextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage"
@@ -264,13 +269,12 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button"
+                android:text="@string/save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elements_margin"
-                android:padding="@dimen/elements_margin"
-                android:text="@string/save"
-                android:textStyle="bold"
-                app:cornerRadius="@dimen/edit_corner_radius" />
+                android:layout_marginVertical="@dimen/elements_margin"
+              style="@style/Button"
+               />
 
         </LinearLayout>
 

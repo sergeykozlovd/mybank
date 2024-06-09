@@ -15,6 +15,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="activity_background">#FFeeeeee</color>
-    <color name="digit_fon">#fff</color>
-    <color name="pin_color">#000fff</color>
+    <color name="digit_fon">#15F683F4</color>
+    <color name="pin_color">#E2134C</color>
+    <color name="textEdit">#A63B135D</color>
+    <color name="textHint">#E5330859</color>
+    <color name="transparent">#00000000</color>
 </resources>

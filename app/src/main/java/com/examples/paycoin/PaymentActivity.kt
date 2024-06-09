@@ -1,6 +1,7 @@
 package com.examples.paycoin
 
 import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -8,11 +9,13 @@ import android.media.RingtoneManager
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 
 class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
@@ -37,6 +40,8 @@ class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
     }
 
     private fun initAnimation(){
+
+
         ObjectAnimator.ofFloat(textConnecting, "alpha",0f, 1f).apply {
             duration = 700
             repeatCount = ObjectAnimator.INFINITE
@@ -102,20 +107,4 @@ class PaymentActivity:AppCompatActivity(R.layout.activity_payment) {
         tvAmount.text = "Pay Amount ${amount}"
     }
 
-//    internal fun ImageView.applyLoopingAnimatedVectorDrawable(@DrawableRes avdResId: Int) {
-//        val animated = AnimatedVectorDrawableCompat.create(context, avdResId)
-//        animated?.registerAnimationCallback(object : Animatable2Compat.AnimationCallback() {
-//            override fun onAnimationEnd(drawable: Drawable?) {
-//                if (isPlayAnimate) {
-//                    this@applyLoopingAnimatedVectorDrawable.post { animated.start() }
-//                }
-//            }
-//        })
-//        this.setImageDrawable(animated)
-//        animated?.start()
-//    }
-//    override fun onStart() {
-//        super.onStart()
-//        ivCardAnim.applyLoopingAnimatedVectorDrawable(R.drawable.avd_anim)
-//    }
 }
