@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PayCoinOld"
+rootProject.name = "MyBank"
 include(":app")
  
